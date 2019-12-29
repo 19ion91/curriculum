@@ -9,73 +9,50 @@ public class Persona {
 	@Id
 	@GeneratedValue
 	private int id;
-	private String Name;
-	private String Surname;
-	private ArrayList<String> Sports;
-	private ArrayList<String> Skills;
-	private int Height;
-	private int Weight;
+	private String name;
+	private String surname;
+	private ArrayList<String> sports;
+	private ArrayList<String> skills;
+	private int height;
+	private int weight;
 	public Persona() {}
 	public Persona(String Name, String Surname) {
-		this.Name=Name;
-		this.Surname=Surname;
-		this.Sports = new ArrayList<>();
-		this.Skills = new ArrayList<>();
+		this.name=Name;
+		this.surname=Surname;
+		this.sports = new ArrayList<>();
+		this.skills = new ArrayList<>();
 	}
 	public ArrayList<String> getSkill() {
-		return Skills;
+		return skills;
 	}
 	public void setSkill(ArrayList<String> skill) {
-		Skills.addAll(skill);
+		skills.addAll(skill);
 	}
 	public ArrayList<String> getSport() {
-		return Sports;
+		return sports;
 	}
 	public void setSport(ArrayList<String> sport) {
-		Sports.addAll(sport);
+		sports.addAll(sport);
 	}
 	public int getWeight() {
-		return Weight;
+		return weight;
 	}
 	public void setWeight(int Weight) {
-		this.Weight = Weight;
+		this.weight = Weight;
 	}
 	public int getHeight() {
-		return Height;
+		return height;
 	}
-	public void setHeight(int height) {
-		Height = height;
+	public void setheight(int height) {
+		this.height = height;
 	}
 	public String getName() {
-		return this.Name;
+		return this.name;
 	}
 	public int getId() {
 		return id;
 	}
-	public void setId(int id) {
-		this.id = id;
-	}
 	public String getSurname() {
-		return Surname;
+		return surname;
 	}
-	public void setSurname(String surname) {
-		Surname = surname;
-	}
-	public ArrayList<String> getSports() {
-		return Sports;
-	}
-	public void setSports(ArrayList<String> sports) {
-		Sports = sports;
-	}
-	public ArrayList<String> getSkills() {
-		return Skills;
-	}
-	public void setSkills(ArrayList<String> skills) {
-		Skills = skills;
-	}
-	public void setName(String name) {
-		Name = name;
-	}
-	
-	
 }

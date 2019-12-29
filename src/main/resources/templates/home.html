@@ -15,115 +15,49 @@
 
     <title>Index</title>
 </head>
-<body>
-hello world
-<span th:text="${data.Name}"></span>
-[[${data.Surname}]]
-
-   <!--
-<div class = "container" >
-            <table class="table table-hover">
-                <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Country</th>
-                    <th>Capital</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr th:each="persona : ${data}">
-                    <td th:text="${persona.id}"></td>
-                   <td th:text="${persona.Name}"></td>
-                    <td th:text="${persona.Surname}"></td>-->
-                    <td>
-                      <!--  <a class="btn btn-danger delBtn">Delete</a>
-                        <a class="btn btn-primary eBtn">Edit</a>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-
-</div>-->
-<!--  
-
-                <tr th:each="country : ${data}">
-                    <td th:text="${country.id}"></td>
-                    <td th:text="${country.name}"></td>
-                    <td th:text="${country.capital}"></td>
-                    <td>
-                        <a class="btn btn-danger delBtn" th:href="@{delete/(id=${country.id})}">Delete</a>
-                        <a class="btn btn-primary eBtn" th:href="@{findOne/(id=${country.id})}">Edit</a>
-
-            <ul class="nav nav-pills">
-                <li class="nav-item"
-                    th:each="i : ${#numbers.sequence(0,data.totalPages-1)}"><a
-                        class="nav-link" th:classappend="${currentPage}==${i}?'active':''" th:href="@{/(page=${i})}"
-                        th:text="${i}"></a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="myForm">
-        <form action="#" method="post" th:action="@{/save}">
-            <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade"
-                 id="exampleModal" role="dialog"
-                 tabindex="-1">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Update or
-                                Create</h5>
-                            <button aria-label="Close" class="close" data-dismiss="modal"
-                                    type="button">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label class="col-form-label" for="id">ID:</label>
-                                <input class="form-control" id="id" name="id" type="text" value=""/>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-form-label" for="name">Name:</label>
-                                <input class="form-control" id="name" name="name" type="text" value=""/>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-form-label" for="capital">Capital:</label>
-                                <input class="form-control" id="capital" name="capital" type="text" value=""/>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-secondary" data-dismiss="modal"
-                                    type="button">Close
-                            </button>
-                            <input class="btn btn-primary" type="submit" value="save"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-
-    <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="myModal"
-         role="dialog" tabindex="-1">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="myModalLabel">Delete Record</h5>
-                    <button aria-label="Close" class="close" data-dismiss="modal"
-                            type="button">
-                        <span aria-hidden="true">&times;</span>
-
-
-                    <p class="alert alert-danger">
-                        Are you sure you want to delete this country?
-
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" data-dismiss="modal"
-                            type="button">Close
-                    </button>
-                    <a class="btn btn-danger" href="" id="delRef">Delete</a>
--->
+<body style="background-color:grey;">
+<!--  parte mia  -->
+<div class="container">
+	<div class="row">
+	     <div class="col-lg-4"></div>
+	     <div class="col-lg-2" style="background-color:yellow;">
+	     	Nome : [[${data.name}]]
+	     </div>
+	     <div class="col-lg-2" align="right" style="background-color:green;">
+	     	Cognome : [[${data.Surname}]]
+	     </div>
+	     <div class="col-lg-4"></div>
+	</div>
+	<div class="row">
+	     <div class="col-lg-4" align="center">
+	     	Skills :
+	     	<br>
+	     	<a class="btn btn-danger delBtn">Delete</a>
+	     	<br>
+			<a class="btn btn-primary eBtn">Edit</a>
+	     </div>
+	     <div class="col-lg-4">
+	     <img src="https://scontent.ffco4-1.fna.fbcdn.net/v/t31.0-0/p640x640/14124260_10209047546020297_5793503885453956679_o.jpg?_nc_cat=107&_nc_ohc=Udjp2hIIYDIAQmhiB6hylkgZRZm8qp-7-aQ3sFDsmzFLcXGEu7whJ02eg&_nc_ht=scontent.ffco4-1.fna&oh=f71ee0f06ab4c32bf86adc0e17b22105&oe=5EA0986E"
+	      width="100%"></img>
+	     </div>
+	     <div class="col-lg-4" align="center">
+	     	Hobby :
+	     	<br>
+	     	<a class="btn btn-danger delBtn">Delete</a>
+	     	<br>
+			<a class="btn btn-primary eBtn">Edit</a>
+	     </div>
+	</div>
+		<div class="row">
+	     <div class="col-lg-4"></div>
+	     <div class="col-lg-4" align = "center">
+	     	Caratteristiche:<br>
+	     	Altezza : [[${data.Height}]] <a class="btn btn-primary eBtn">Edit</a><br>
+	     	Peso : [[${data.Weight}]] <a class="btn btn-primary eBtn">Edit</a><br>
+	     </div>
+	     <div class="col-lg-4"></div>
+	</div>
+</div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
